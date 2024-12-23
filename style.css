@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+   position: relative;
+
+}
+main.over{
+    z-index: 10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+main.under{
+    position: absolute;
+    text-align: center;
+    left:0vw;
+    right: 0vw;
+   padding-top:150px;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background-image: url('bg.jpg');
+   background-repeat: no-repeat;
+   background-size: 100vw 100vh;
+   
+}
+main.under p{
+    font-size: clamp(5vw, 8vh , 10vh);
+    word-wrap: break-word;
+    font-family: 'Pacifico',serif;
+    
+}
+
+.wish:after{
+    content: "";
+    animation: wish 5s 12s forwards;
+}
+.left{
+    width: 50vw;
+    height:100vh;
+    background: url('curtain.png');
+    animation: left_door 5s 2s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-fill-mode: forwards;
+    box-shadow: 5px 5px 20px yellow;
+    
+}
+.right{
+    width: 50vw;
+    background: url('curtain.png');
+    height:100vh;
+    animation: right_door 5s 2s;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 50px yellow;
+   
+}
+p.year:after{
+    content: "";
+ animation: animate 10s 3s forwards ;
+}
+
+
+.four{
+    display: inline;
+}
+.twos{
+    display: inline;
+}
+@keyframes left_door{
+   0%{
+    left:0;
+   }
+
+   100%{
+    width: 15vmin;
+    height:100vh;
+  
+}
+}
+@keyframes right_door{
+    0%{
+        right: 0;
+    }
+   
+    100%{
+       
+        width: 15vmin;
+        height:100vh;
+   }
+}
+@keyframes animate {
+   0%{
+    content: "2024";
+   }
+   20%{
+    content:"202 4";
+   }
+   
+   30%{
+    content: "202";
+   }
+   75%{
+    content: "202?"
+   }
+   100%{
+    content: "2025";
+   }
+}
+@keyframes wish {
+    0%{
+        content: "";
+    }
+    100%{
+      content: "HAPPY NEW YEAR!";
+    }
+}
